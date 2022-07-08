@@ -61,6 +61,17 @@ namespace AutoDealers.BL
 
             return producto;
         }
+        public List<Producto> ObtenerProductosActivos()
+        {
+            ListadeProductos = _contexto.Productos
+                .Include("Categoria")
+                .Where(r => r.Activo == true)
+                .OrderBy(r => r.Descripcion)
+                .ToList();
+
+            return ListadeProductos;
+        }
+
 
         public void EliminarProducto (int id)
         {
