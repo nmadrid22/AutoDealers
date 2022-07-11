@@ -23,6 +23,20 @@ namespace AutoDealers.BL
 
             ListadeProductos = _contexto.Productos
                 .Include("Categoria")
+                .OrderBy(r => r.Categoria.Descripcion)
+                .ThenBy(r=> r.Descripcion)
+                .ToList();
+
+            return ListadeProductos;
+        }
+
+        public List<Producto> ObtenerProductosActivos()
+        {
+
+            ListadeProductos = _contexto.Productos
+                .Include("Categoria")
+                .Where(r => r.Activo ==true)
+                .OrderBy(r => r.Descripcion)
                 .ToList();
 
             return ListadeProductos;
@@ -37,6 +51,7 @@ namespace AutoDealers.BL
             else
             {
                 var productoExistente = _contexto.Productos.Find(producto.Id);
+
                 productoExistente.Descripcion = producto.Descripcion;
                 productoExistente.Modelo = producto.Modelo;
                 productoExistente.Color = producto.Color;
@@ -44,9 +59,6 @@ namespace AutoDealers.BL
                 productoExistente.Existencia = producto.Existencia;
                 productoExistente.CategoriaId= producto.CategoriaId;
                 productoExistente.UrlImagen = producto.UrlImagen;
-
-
-
             } 
             
             _contexto.SaveChanges();
@@ -61,17 +73,6 @@ namespace AutoDealers.BL
 
             return producto;
         }
-        public List<Producto> ObtenerProductosActivos()
-        {
-            ListadeProductos = _contexto.Productos
-                .Include("Categoria")
-                .Where(r => r.Activo == true)
-                .OrderBy(r => r.Descripcion)
-                .ToList();
-
-            return ListadeProductos;
-        }
-
 
         public void EliminarProducto (int id)
         {

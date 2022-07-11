@@ -12,9 +12,7 @@ namespace AutoDealers.BL
         Contexto _contexto;
         public List<Categoria> ListadeCategorias { get; set; }
 
-
         public CategoriasBL()
-
         {
             _contexto = new Contexto();
             ListadeCategorias = new List<Categoria>();
