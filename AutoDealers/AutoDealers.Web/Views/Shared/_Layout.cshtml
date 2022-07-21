@@ -1,46 +1,491 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <meta charset="utf-8">
+    <title>Autodealers - ALPHA MOTORS</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="eCommerce HTML Template Free Download" name="keywords">
+    <meta content="eCommerce HTML Template Free Download" name="description">
+
+    <!-- Favicon -->
+    <link href="~/assets/img/favicon.ico" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/assets/lib/slick/slick.css" rel="stylesheet">
+    <link href="~/assets/lib/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Alpha Motors", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("Inicio","Index","Home")
-                    </li>
-                    <li>
-                        @Html.ActionLink("Lista de Marcas", "Index","Productos")
-                    </li>
-                </ul>
+    <!-- Top bar Start -->
+    <div class="top-bar">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <i class="fa fa-envelope"></i>
+                    soporte@alphamotors.com
+                </div>
+                <div class="col-sm-6">
+                    <i class="fa fa-phone-alt"></i>
+                    +504 9448-9598
+                </div>
             </div>
         </div>
     </div>
+    <!-- Top bar End -->
+    <!-- Nav Bar Start -->
+    <div class="nav">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+                <a href="#" class="navbar-brand">MENU</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto">
+                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
+                        <a href="product-list.html" class="nav-item nav-link">Productos</a>
+                        <a href="product-detail.html" class="nav-item nav-link">Detalles de productos</a>
+                        <a href="cart.html" class="nav-item nav-link">Cart</a>
+                        <a href="checkout.html" class="nav-item nav-link">Checkout</a>
+                        <a href="my-account.html" class="nav-item nav-link">Mi Cuenta</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mas Paginas</a>
+                            <div class="dropdown-menu">
+                                <a href="wishlist.html" class="dropdown-item">Wishlist</a>
+                                <a href="login.html" class="dropdown-item">Login & Register</a>
+                                <a href="contact.html" class="dropdown-item">Contactanos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Account</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Login</a>
+                                <a href="#" class="dropdown-item">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </div>
+    <!-- Nav Bar End -->
+    <!-- Bottom Bar Start -->
+    <div class="bottom-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="index.html">
+                            <!--<img src="~/assets/img/logo.png" alt="Logo">--> 
+                            <h1>Alpha Motors</h1>
+</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="search">
+                        <input type="text" placeholder="Search">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="user">
+                        <a href="wishlist.html" class="btn wishlist">
+                            <i class="fa fa-heart"></i>
+                            <span>(0)</span>
+                        </a>
+                        <a href="cart.html" class="btn cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>(0)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Bar End -->
+    <!-- Main Slider Start -->
+    <div class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <nav class="navbar bg-light">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-home"></i>Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-shopping-bag"></i>Mas Vendidos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-plus-square"></i>Novedades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-female"></i>Carros Nuevos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-child"></i>Carros Usados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-tshirt"></i>Carros Deportivos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-mobile-alt"></i>Recien Ingresados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-microchip"></i>Chocados</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6">
+                    <div class="header-slider normal-slider">
+                        <div class="header-slider-item">
+                            <img src="~/assets/Imagenes/BMW.jpg" alt="Slider Image" />
+                            <div class="header-slider-caption">
+                                <p>Some text goes here that describes the image</p>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="header-slider-item">
+                            <img src="~/assets/Imagenes/AMARILLO.jpg" alt="Slider Image" />
+                            <div class="header-slider-caption">
+                                <p>Some text goes here that describes the image</p>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="header-slider-item">
+                            <img src="~/assets/Imagenes/COMPRA.jpg" alt="Slider Image" />
+                            <div class="header-slider-caption">
+                                <p>Some text goes here that describes the image</p>
+                                <a class="btn" href=""><i class="fa fa-shopping-cart"></i>Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="header-img">
+                        <div class="img-item">
+                            <img src="~/assets/Imagenes/CARRO.jpg" />
+                            <a class="img-text" href="">
+                                <p>Some text goes here that describes the image</p>
+                            </a>
+                        </div>
+                        <div class="img-item">
+                            <img src="~/assets/Imagenes/DEPO.jpg" />
+                            <a class="img-text" href="">
+                                <p>Some text goes here that describes the image</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Slider End -->
+    <!-- Brand Start -->
+    <div class="brand">
+        <div class="container-fluid">
+            <div class="brand-slider">
+                <div class="brand-item"><img src="~/assets/img/brand-1.png" alt=""></div>
+                <div class="brand-item"><img src="~/assets/img/brand-2.png" alt=""></div>
+                <div class="brand-item"><img src="~/assets/img/brand-3.png" alt=""></div>
+                <div class="brand-item"><img src="~/assets/img/brand-4.png" alt=""></div>
+                <div class="brand-item"><img src="~/assets/img/brand-5.png" alt=""></div>
+                <div class="brand-item"><img src="~/assets/img/brand-6.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!-- Brand End -->
+    <!-- Feature Start-->
+    <div class="feature">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-6 feature-col">
+                    <div class="feature-content">
+                        <i class="fab fa-cc-mastercard"></i>
+                        <h2>Pago Seguro</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur elit
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 feature-col">
+                    <div class="feature-content">
+                        <i class="fa fa-truck"></i>
+                        <h2>Entregas a Nivel Nacional</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur elit
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 feature-col">
+                    <div class="feature-content">
+                        <i class="fa fa-sync-alt"></i>
+                        <h2>90 Dias Para Devoluciones</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur elit
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 feature-col">
+                    <div class="feature-content">
+                        <i class="fa fa-comments"></i>
+                        <h2>Soporte 24/7</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur elit
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End-->
+    <!-- Category Start-->
+   <!-- <div class="category">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="category-item ch-400">
+                        <img src="~/assets/img/category-3.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-item ch-250">
+                        <img src="~/assets/img/category-4.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                    <div class="category-item ch-150">
+                        <img src="~/assets/img/category-5.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-item ch-150">
+                        <img src="~/assets/img/category-6.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                    <div class="category-item ch-250">
+                        <img src="~/assets/img/category-7.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="category-item ch-400">
+                        <img src="~/assets/img/category-8.jpg" />
+                        <a class="category-name" href="">
+                            <p>Some text goes here that describes the image</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!-- Category End-->
+    <!-- Call to Action Start -->
+    <div class="call-to-action">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>Llamanos para cualquier consulta</h1>
+                </div>
+                <div class="col-md-6">
+                    <a href="tel:26304360">+504 2630-4360</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Call to Action End -->
+@RenderBody()
+    <!-- Review Start -->
+    <div class="review">
+        <div class="container-fluid">
+            <div class="row align-items-center review-slider normal-slider">
+                <div class="col-md-6">
+                    <div class="review-slider-item">
+                        <div class="review-img">
+                            <img src="~/assets/img/review-1.jpg" alt="Image">
+                        </div>
+                        <div class="review-text">
+                            <h2>Lizzy Bonilla</h2>
+                            <h3>Asesora de ventas</h3>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae nunc eget leo finibus luctus et vitae lorem
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="review-slider-item">
+                        <div class="review-img">
+                            <img src="~/assets/img/review-2.jpg" alt="Image">
+                        </div>
+                        <div class="review-text">
+                            <h2>Kevin Martinez</h2>
+                            <h3>Gerente administrativo</h3>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae nunc eget leo finibus luctus et vitae lorem
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="review-slider-item">
+                        <div class="review-img">
+                            <img src="~/assets/img/review-3.jpg" alt="Image">
+                        </div>
+                        <div class="review-text">
+                            <h2>Suyapa Reyes</h2>
+                            <h3>Servicio al cliente</h3>
+                            <div class="ratting">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae nunc eget leo finibus luctus et vitae lorem
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Review End -->
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2>Contactanos:</h2>
+                        <div class="contact-info">
+                            <p><i class="fa fa-map-marker"></i>San Pedro Sula, Barrio Guamilito 10 ave.</p>
+                            <p><i class="fa fa-envelope"></i>ventas@alphamotors.com / info@alphamotors.com  </p>
+                            <p><i class="fa fa-phone"></i>+504 26304360</p>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2>Siguenos</h2>
+                        <div class="contact-info">
+                            <div class="social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                                <a href=""><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2>Informacion de la Compañia</h2>
+                        <ul>
+                            <li><a href="#">Acerca de Nosotros</a></li>
+                            <li><a href="#">Politicas de Privacidad</a></li>
+                            <li><a href="#">Terminos y Condiciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-widget">
+                        <h2>Purchase Info</h2>
+                        <ul>
+                            <li><a href="#">Pyament Policy</a></li>
+                            <li><a href="#">Shipping Policy</a></li>
+                            <li><a href="#">Return Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row payment align-items-center">
+                <div class="col-md-6">
+                    <div class="payment-method">
+                        <h2>Aceptamos:</h2>
+                        <img src="~/assets/img/payment-method.png" alt="Payment Method" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="payment-security">
+                        <h2>Secured By:</h2>
+                        <img src="~/assets/img/godaddy.svg" alt="Payment Security" />
+                        <img src="~/assets/img/norton.svg" alt="Payment Security" />
+                        <img src="~/assets/img/ssl.svg" alt="Payment Security" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <!-- Footer Bottom Start -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 copyright">
+                    <p>Copyright &copy; <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
+                </div>
+
+                <div class="col-md-6 template-by">
+                    <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Bottom End -->
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
 </html>

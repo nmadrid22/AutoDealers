@@ -125,6 +125,63 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\cart.html" />
+    <Content Include="assets\checkout.html" />
+    <Content Include="assets\contact.html" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\ecommerce-html-template.jpg" />
+    <Content Include="assets\img\brand-1.png" />
+    <Content Include="assets\img\brand-2.png" />
+    <Content Include="assets\img\brand-3.png" />
+    <Content Include="assets\img\brand-4.png" />
+    <Content Include="assets\img\brand-5.png" />
+    <Content Include="assets\img\brand-6.png" />
+    <Content Include="assets\img\category-1.jpg" />
+    <Content Include="assets\img\category-2.jpg" />
+    <Content Include="assets\img\category-3.jpg" />
+    <Content Include="assets\img\category-4.jpg" />
+    <Content Include="assets\img\category-5.jpg" />
+    <Content Include="assets\img\category-6.jpg" />
+    <Content Include="assets\img\category-7.jpg" />
+    <Content Include="assets\img\category-8.jpg" />
+    <Content Include="assets\img\godaddy.svg" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\norton.svg" />
+    <Content Include="assets\img\payment-method.png" />
+    <Content Include="assets\img\product-1.jpg" />
+    <Content Include="assets\img\product-10.jpg" />
+    <Content Include="assets\img\product-2.jpg" />
+    <Content Include="assets\img\product-3.jpg" />
+    <Content Include="assets\img\product-4.jpg" />
+    <Content Include="assets\img\product-5.jpg" />
+    <Content Include="assets\img\product-6.jpg" />
+    <Content Include="assets\img\product-7.jpg" />
+    <Content Include="assets\img\product-8.jpg" />
+    <Content Include="assets\img\product-9.jpg" />
+    <Content Include="assets\img\review-1.jpg" />
+    <Content Include="assets\img\review-2.jpg" />
+    <Content Include="assets\img\review-3.jpg" />
+    <Content Include="assets\img\slider-1.jpg" />
+    <Content Include="assets\img\slider-2.jpg" />
+    <Content Include="assets\img\slider-3.jpg" />
+    <Content Include="assets\img\ssl.svg" />
+    <Content Include="assets\index.html" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\lib\easing\easing.js" />
+    <Content Include="assets\lib\easing\easing.min.js" />
+    <Content Include="assets\lib\slick\ajax-loader.gif" />
+    <Content Include="assets\lib\slick\fonts\slick.svg" />
+    <Content Include="assets\lib\slick\slick-theme.css" />
+    <Content Include="assets\lib\slick\slick.css" />
+    <Content Include="assets\lib\slick\slick.js" />
+    <Content Include="assets\lib\slick\slick.min.js" />
+    <Content Include="assets\LICENSE.txt" />
+    <Content Include="assets\login.html" />
+    <Content Include="assets\my-account.html" />
+    <Content Include="assets\product-detail.html" />
+    <Content Include="assets\product-list.html" />
+    <Content Include="assets\READ-ME.txt" />
+    <Content Include="assets\wishlist.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -134,17 +191,23 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="assets\lib\slick\config.rb" />
+    <Content Include="assets\lib\slick\fonts\slick.eot" />
+    <Content Include="assets\lib\slick\fonts\slick.ttf" />
+    <Content Include="assets\lib\slick\fonts\slick.woff" />
+    <Content Include="assets\lib\slick\slick-theme.less" />
+    <Content Include="assets\lib\slick\slick-theme.scss" />
+    <Content Include="assets\lib\slick\slick.less" />
+    <Content Include="assets\lib\slick\slick.scss" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
-    <Content Include="Views\Productos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProductosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
