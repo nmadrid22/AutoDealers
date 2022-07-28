@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace AutoDealers.WebAdmin.Controllers
 {
+    [Authorize]
     public class OrdenesController : Controller
     {
         OrdenesBL _ordenesBL;
@@ -30,7 +31,7 @@ namespace AutoDealers.WebAdmin.Controllers
         {
             var nuevaOrden = new Orden();
             var clientes = _clientesBL.ObtenerClientesActivos();
-            ViewBag.clienteId = new SelectList(clientes, "Id", "Nombre");
+            ViewBag.ClienteId = new SelectList(clientes, "Id", "Nombre");
 
             return View(nuevaOrden);
         }

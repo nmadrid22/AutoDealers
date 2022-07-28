@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace AutoDealers.WebAdmin.Controllers
 {
+    [Authorize]
     public class CategoriasController : Controller
     {
         CategoriasBL _categoriasBL;
@@ -69,14 +70,14 @@ namespace AutoDealers.WebAdmin.Controllers
         }
         public ActionResult Detalle(int id)
         {
-            var producto = _categoriasBL.ObtenerCategorias(id);
-            return View(producto);
+            var categoria= _categoriasBL.ObtenerCategorias(id);
+            return View(categoria);
         }
 
         public ActionResult Eliminar(int id)
         {
-            var producto = _categoriasBL.ObtenerCategorias(id);
-            return View(producto);
+            var categoria = _categoriasBL.ObtenerCategorias(id);
+            return View(categoria);
         }
 
         [HttpPost]

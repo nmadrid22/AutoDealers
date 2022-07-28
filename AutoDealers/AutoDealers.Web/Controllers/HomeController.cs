@@ -17,7 +17,9 @@ namespace AutoDealers.Web.Controllers
             var productosBL = new ProductosBL();
             var listadeProductos = productosBL.ObtenerProductosActivos();
 
-            ViewBag.adminWebsiteUrl = ConfigurationManager.AppSettings["adminWebsiteUrl"];
+            ViewBag.adminWebsiteUrl =
+                 ConfigurationManager.AppSettings["adminWebsiteUrl"];
+
             return View(listadeProductos);
           
         }

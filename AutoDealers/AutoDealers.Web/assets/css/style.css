@@ -9,7 +9,7 @@ body {
 }
 
 a {
-    color: #FF6F61;
+    color: #f40f0f;
 }
 
 a:hover,
@@ -331,7 +331,7 @@ h2 {
     height: 40px;
     padding: 0 15px;
     color: #666666;
-    border: 1px solid #FF6F61;
+    border: 1px solid #e11907;
     border-radius: 4px;
 }
 
@@ -1872,7 +1872,7 @@ h2 {
 .call-to-action {
     position: relative;
     padding: 30px 0;
-    background: #FF6F61;
+    background: #f20b0b;
 }
 
 .call-to-action .col-md-6:last-child {
@@ -1919,7 +1919,7 @@ h2 {
 .newsletter {
     position: relative;
     padding: 30px 0;
-    background: #FF6F61;
+    background: #f11804;
 }
 
 .newsletter h1 {

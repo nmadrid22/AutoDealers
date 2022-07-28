@@ -19,6 +19,7 @@ namespace AutoDealers.BL
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            Database.SetInitializer(new DatosdeInicio()); //agregar datos de inicio a la base de datos al momento de crearla
         }
 
         public DbSet<Producto> Productos { get; set; }
@@ -27,6 +28,6 @@ namespace AutoDealers.BL
 
         public DbSet<Orden> Ordenes { get; set; }
         public DbSet<OrdenDetalle> OrdenDetalle { get; set; }
-
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

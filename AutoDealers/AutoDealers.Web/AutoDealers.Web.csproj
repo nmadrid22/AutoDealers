@@ -18,8 +18,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -125,11 +125,39 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets2\lib\easing\easing.js" />
+    <Content Include="assets2\lib\easing\easing.min.js" />
+    <Content Include="assets2\lib\slick\ajax-loader.gif" />
+    <Content Include="assets2\lib\slick\fonts\slick.svg" />
+    <Content Include="assets2\lib\slick\slick-theme.css" />
+    <Content Include="assets2\lib\slick\slick.css" />
+    <Content Include="assets2\lib\slick\slick.js" />
+    <Content Include="assets2\lib\slick\slick.min.js" />
     <Content Include="assets\cart.html" />
     <Content Include="assets\checkout.html" />
     <Content Include="assets\contact.html" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\ecommerce-html-template.jpg" />
+    <Content Include="assets\Imagenes\AMARILLO.jpg" />
+    <Content Include="assets\Imagenes\BMW.jpg" />
+    <Content Include="assets\Imagenes\CARRO.jpg" />
+    <Content Include="assets\Imagenes\CIVIC.jpg" />
+    <Content Include="assets\Imagenes\COMPRA.jpg" />
+    <Content Include="assets\Imagenes\DEPO.jpg" />
+    <Content Include="assets\Imagenes\F150.png" />
+    <Content Include="assets\Imagenes\FORD.png" />
+    <Content Include="assets\Imagenes\HILUX.jpg" />
+    <Content Include="assets\Imagenes\HONDA.png" />
+    <Content Include="assets\Imagenes\HURACAN.jpg" />
+    <Content Include="assets\Imagenes\Inicio.jpg" />
+    <Content Include="assets\Imagenes\Jepp.jpg" />
+    <Content Include="assets\Imagenes\KIA.png" />
+    <Content Include="assets\Imagenes\kiasorento.png" />
+    <Content Include="assets\Imagenes\L200.jpg" />
+    <Content Include="assets\Imagenes\LAMBO.jpg" />
+    <Content Include="assets\Imagenes\LAMBORGHINI.png" />
+    <Content Include="assets\Imagenes\MITSUBISHI.jpg" />
+    <Content Include="assets\Imagenes\TOYOTA.png" />
     <Content Include="assets\img\brand-1.png" />
     <Content Include="assets\img\brand-2.png" />
     <Content Include="assets\img\brand-3.png" />
@@ -199,6 +227,14 @@
     <Content Include="assets\lib\slick\slick-theme.scss" />
     <Content Include="assets\lib\slick\slick.less" />
     <Content Include="assets\lib\slick\slick.scss" />
+    <Content Include="assets2\lib\slick\config.rb" />
+    <Content Include="assets2\lib\slick\fonts\slick.eot" />
+    <Content Include="assets2\lib\slick\fonts\slick.ttf" />
+    <Content Include="assets2\lib\slick\fonts\slick.woff" />
+    <Content Include="assets2\lib\slick\slick-theme.less" />
+    <Content Include="assets2\lib\slick\slick-theme.scss" />
+    <Content Include="assets2\lib\slick\slick.less" />
+    <Content Include="assets2\lib\slick\slick.scss" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />

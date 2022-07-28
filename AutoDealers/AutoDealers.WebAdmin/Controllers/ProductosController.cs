@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace AutoDealers.WebAdmin.Controllers
 {
+    [Authorize]
     public class ProductosController : Controller
     {
 
@@ -74,15 +75,22 @@ namespace AutoDealers.WebAdmin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Editar (Producto producto)
+        public ActionResult Editar(Producto producto, HttpPostedFileBase imagen)
         {
             if (ModelState.IsValid)
             {
                 if (producto.CategoriaId == 0)
                 {
-                    ModelState.AddModelError("CategoriaId", "Ingrese la categoria");
+                    ModelState.AddModelError("CategoriaId", "Seleccione una categoria");
                     return View(producto);
                 }
+
+                if (imagen != null)
+                {
+                    producto.UrlImagen = GuardarImagen(imagen);
+                }
+
+
                 _productosBL.GuardarProducto(producto);
 
                 return RedirectToAction("Index");
