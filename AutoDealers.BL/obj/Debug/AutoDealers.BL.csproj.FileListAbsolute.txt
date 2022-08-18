@@ -1,0 +1,10 @@
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\bin\Debug\AutoDealers.BL.dll.config
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\bin\Debug\AutoDealers.BL.dll
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\bin\Debug\AutoDealers.BL.pdb
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\bin\Debug\EntityFramework.dll
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\bin\Debug\EntityFramework.xml
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\obj\Debug\AutoDealers.BL.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\obj\Debug\AutoDealers.BL.dll
+C:\Users\Dell\Music\Proyecto final\Tarea8AVANCEE\AutoDealers.BL\obj\Debug\AutoDealers.BL.pdb
